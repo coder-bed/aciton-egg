@@ -1,13 +1,20 @@
+name: 测试 CI/CD
+
 on: push
 
 # 工作集合
 jobs:
   # 自定义工作名称
   npm-build:
+    name: npm-build工作
     runs-on: ubuntu-latest # 工作环境 windows-latest
+
     steps: # 工作步骤
-      #- run: pwd
-      #- run: npm --version
-      - uses: actions/checkout@v4 # 访问仓库内容
-      - run: npm install
-      - run: npm run build
+      - name: 读取仓库内容
+        uses: actions/checkout@v4
+
+      - name: 安装依赖
+        run: npm install
+      
+      - name: 项目打包
+        run: npm run build
