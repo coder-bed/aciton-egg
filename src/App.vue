@@ -12,7 +12,7 @@
 
 <script lang="ts" setup>
 import HelloWorld from './components/HelloWorld.vue';
-let name = 'xiaoming';
+let name = 'xiaoming22';
 console.log(name);
 </script>
 
