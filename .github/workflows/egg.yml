@@ -2,6 +2,9 @@ name: 测试 CI/CD
 
 on: push
 
+permissions:
+  contents: write
+
 # 工作集合
 jobs:
   # 自定义工作名称
