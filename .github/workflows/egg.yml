@@ -6,7 +6,8 @@ jobs:
   npm-build:
     runs-on: ubuntu-latest # 工作环境 windows-latest
     steps: # 工作步骤
-      - run: pwd
-      - run: npm --version
+      #- run: pwd
+      #- run: npm --version
+      - uses: actions/checkout@v4 # 访问仓库内容
       - run: npm install
       - run: npm run build
